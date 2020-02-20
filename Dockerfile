@@ -1,6 +1,6 @@
-FROM	gliderlabs/alpine:3.3
+FROM	gliderlabs/alpine
 RUN apk-install nginx
 COPY	index.html /usr/share/nginx/html
-COPY	coreos.com_files/ /usr/share/nginx/html/coreos.com_files/
+COPY	resources/ /usr/share/nginx/html/resources/
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
